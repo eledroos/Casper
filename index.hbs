@@ -19,18 +19,35 @@ into the {body} of the default.hbs template --}}
     </div>
 </header>
 
-{{!-- The main content area --}}
+{{!-- The main content area for PROJECTS --}}
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
-
         <div class="post-feed">
-            {{#foreach posts}}
-
-                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-                {{> "post-card"}}
-
-            {{/foreach}}
+          {{!-- You need to "include" so that the variables are passed to 'post-card' --}}
+          {{#get "posts" filter="tags:[projects,Projects]" include="tags,author" limit="5"}}
+              {{#foreach posts}}
+                  {{> "post-card"}}
+              {{/foreach}}
+          {{/get}}
         </div>
+    </div>
+</main>
 
+{{!-- A HR break with a title in the middle saying "BLOG" --}}
+<p id="title-block" class="title-block">
+  <span>BLOG</span>
+</p>
+
+{{!-- The main content area for BLOG --}}
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+        <div class="post-feed">
+          {{!-- You need to "include" so that the variables are passed to 'post-card' --}}
+          {{#get "posts" filter="tags:[Blog,blog]" include="tags,author" limit="8"}}
+              {{#foreach posts}}
+                  {{> "post-card"}}
+              {{/foreach}}
+          {{/get}}
+        </div>
     </div>
 </main>

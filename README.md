@@ -1,6 +1,7 @@
-# Casper
+# Liberty
+### A fork of [Casper](http://github.com/tryghost/casper/)
 
-The default theme for [Ghost](http://github.com/tryghost/ghost/). This is the latest development version of Casper. If you're just looking to download the latest release, head over to the [releases](https://github.com/TryGhost/Casper/releases) page.
+This is the default theme for the Data for Justice Project. Here, development is done on the theme. To see the theme in action, visit [this link](https://data.aclum.org/).
 
 &nbsp;
 

@@ -156,10 +156,50 @@ em,
 dfn {
     font-style: italic;
 }
+
 h1 {
     margin: 0.67em 0;
     font-size: 2em;
 }
+
+.title-block{
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 100px;
+}
+
+.title-block:before,
+.title-block:after {
+  flex-grow: 1;
+  height: 1px;
+  content: '\a0';
+  background-color: #ddd;
+  position: relative;
+  top: 1.25em;
+}
+
+.title-block:before {
+  margin-right:10px;
+}
+
+.title-block:after {
+  margin-left:10px;
+}
+
+.title-block span {
+  background-color: #000;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 1.125em;
+  letter-spacing: .0555555556em;
+  color: #fff;
+  text-decoration: none;
+  padding: .75rem 2.375rem .75rem;
+  position: relative;
+}
+
 small {
     font-size: 80%;
 }
